@@ -52,9 +52,6 @@ async function init() {
     });
 }
 
-
-
-
 async function loadModel() {
     model = await tmAudio.load(URL);
     startListening();
@@ -80,9 +77,6 @@ function onAlarmDetected() {
 }
 
 // 他の関数やイベントハンドラーは変更せずにそのまま使用
-
-
-
 startBtn.addEventListener('click', function() {
     speech.start();
     startBtn.disabled = true;
@@ -101,7 +95,7 @@ function checkSound(transcript) {
 
     if (foundKeyword) {
         // キーワードが含まれている場合、特定のアクションを実行
-        content.innerHTML = '<p class="alert-message">警報が鳴っています。避難してください</p>' + content.innerHTML;
+        content.innerHTML = '<p class="alert-message">警報が作動している恐れがあります。周囲に注意してください</p>' + content.innerHTML;
     }
 }
 
